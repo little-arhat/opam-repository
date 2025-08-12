@@ -1,0 +1,30 @@
+opam-version: "2.0"
+synopsis: "Ppx rewriter for [@@deriving jsobject]"
+description: "Ppx rewriter for [@@deriving jsobject]"
+maintainer: "Roma Sokolov <sokolov.r.v@gmail.com>"
+authors: [ "Roma Sokolov <sokolov.r.v@gmail.com>" ]
+license: "MIT"
+homepage: "https://github.com/little-arhat/ppx_jsobject_conv"
+bug-reports: "https://github.com/little-arhat/ppx_jsobject_conv/issues"
+dev-repo: "git://github.com/little-arhat/ppx_jsobject_conv.git"
+tags: [ "syntax" "jsoo" "javascript" ]
+build: [
+  ["dune" "build" "-p" name "-j" jobs]
+]
+depends: [
+  "ocaml" {>= "4.10.0"}
+  "dune" {>= "2.7"}
+  "js_of_ocaml" {>= "4.0.0"}
+  "ppxlib" {>= "0.36.0"}
+  "webtest" {with-test}
+  "webtest-js" {with-test}
+]
+url {
+  src:
+    "https://github.com/little-arhat/ppx_jsobject_conv/releases/download/0.21.0/ppx_jsobject_conv-0.21.0.tbz"
+  checksum: [
+    "sha256=12e7d38a2fe57cd7141c834cfa48615b22f836abc4b462e1bcec2eaaa0fd16c3"
+    "sha512=ad4676d962761bc95690ccc657fa16cbd3ff922bd6d89c9dc65bf96609872f70adfe8e83adea08e2fb9cdb7768bc2ff25b906380803ff1fb440310833cbebde8"
+  ]
+}
+x-commit-hash: "ef96eef279de5c39f5b451e77b96b490a7d9435a"
